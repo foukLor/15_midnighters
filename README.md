@@ -1,6 +1,19 @@
 # Night Owls Detector
 
-[TODO. There will be project description]
+This script print all people, who has done tasks after 00:00.
+
+##Usage
+
+```sh
+python seek_dev_nighters.py 
+```
+Please use python 3+
+
+And install pytz and requests
+
+```sh
+pip install -r requirements.txt
+```
 
 # Project Goals
 
