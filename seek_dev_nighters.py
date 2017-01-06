@@ -27,9 +27,9 @@ def get_midnighters(records):
     midnighters = []
     for record in records:
         time = get_time(record['timestamp'], record['timezone'])
-        if time is not None and time.hour in range(1,5):
+        if time is not None and (1<= time.hour < 5):
             midnighters.append(record['username'])
-    return midnighters
+    return set(midnighters)
 
 
 def get_time(timestamp, timezone):
@@ -40,7 +40,7 @@ def get_time(timestamp, timezone):
 
 def print_midnighters(midnighters):
     print("These people solved tasks after midnight")
-    for person in set(midnighters):
+    for person in midnighters:
         print(person)
 
 
